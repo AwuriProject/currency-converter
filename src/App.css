@@ -28,6 +28,7 @@ body {
 .form {
   padding: 24px;
   justify-content: center;
+  align-items: center;
 }
 .input-group {
   border-bottom: 3px solid blue;
@@ -36,9 +37,11 @@ input {
   width: 100%;
   border: none;
   outline: none;
+  color: #666666;
+  font-size: 24px;
 }
 .dropdown {
-  padding: 0 8px;
+  padding: 0 4px;
 }
 .dropdown,
 button {
@@ -50,15 +53,42 @@ button {
 button {
   color: #fff;
   padding: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .settings {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 14px;
+  justify-content: space-between;
+  padding: 8px;
+}
+.icon__two {
   gap: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
 }
 h2 {
+  color: #666666;
   text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+select {
+  border: none;
+  outline: none;
+}
+.placeholder {
+  font-size: 14px;
+  padding: 0 5px;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  color: #666666;
+}
+.input-wrap {
+  position: relative;
+}
+.input:focus + .placeholder {
+  top: -15px;
 }

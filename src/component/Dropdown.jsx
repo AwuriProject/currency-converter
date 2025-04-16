@@ -22,7 +22,6 @@ const Dropdown = ({ from, to, setFrom, setTo }) => {
       ? `https://flagsapi.com/${countryType.country}/flat/32.png`
       : "no country";
   };
-  console.log(imageFlag());
   return (
     <div className="flex flex-col gap-8 w-full">
       <div className="border border-gray-400 flex items-center gap-2 dropdown">
@@ -32,14 +31,14 @@ const Dropdown = ({ from, to, setFrom, setTo }) => {
             e.target.onerror = null;
             e.target.src = "./images/globe-two.jpg";
           }}
-          className="w-15 h-15 rounded-full"
+          className="w-15 h-15 rounded-full max-sm:w-10 max-sm:h-10"
           alt="from flag"
         />
         <select
           value={from}
           id="dropdown-from"
           onChange={(e) => setFrom(e.target.value)}
-          className="flex w-full justify-between text-gray-500"
+          className="flex w-full justify-between text-gray-500 cursor-pointer"
         >
           {currenciesCode.map((currency) => (
             <option key={currency.code} value={currency.code}>
@@ -56,14 +55,14 @@ const Dropdown = ({ from, to, setFrom, setTo }) => {
             e.target.onerror = null;
             e.target.src = console.log("./public/images/icon-image.jpg");
           }}
-          className="w-15 h-15 rounded-full"
+          className="w-15 h-15 rounded-full  max-sm:w-10 max-sm:h-10"
           alt="to flag"
         />
         <select
           value={to}
           id="dropdown-to"
           onChange={(e) => setTo(e.target.value)}
-          className="flex w-full justify-between text-gray-500"
+          className="flex w-full justify-between text-gray-500 cursor-pointer"
         >
           {currenciesCode.map((currency) => (
             <option key={currency.code} value={currency.code}>

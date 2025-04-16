@@ -8,7 +8,7 @@ const Form = () => {
   const [amount, setAmount] = useState();
 
   const [from, setFrom] = useState("USD");
-  const [to, setTo] = useState("EUR");
+  const [to, setTo] = useState("NGN");
   const [result, setResult] = useState(null);
 
   const currencyConvert = async function () {
@@ -26,15 +26,17 @@ const Form = () => {
     setAmount.value = "";
   };
   return (
-    <div className="form flex flex-col gap-14">
-      <div className="input-group flex items-align w-full">
-        <input
-          type="text"
-          placeholder="Amount"
-          className="input "
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
+    <div className="form flex flex-col gap-8">
+      <div className="input-group flex items-align w-full justify-between">
+        <div className="input-wrap">
+          <input
+            type="text"
+            className="input"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+          <label className="placeholder">Amount</label>
+        </div>
         <RiExchangeDollarLine color="#666666" fontSize={35} />
       </div>
       <Dropdown from={from} to={to} setFrom={setFrom} setTo={setTo} />

@@ -7,7 +7,7 @@ const Button = ({ currencyConvert, result, from, to, amount, setAmount }) => {
   return (
     <div className="w-full">
       <button
-        className="border w-full bg-blue-900"
+        className="border w-full bg-blue-900 max-sm:text-2xl"
         onClick={() => {
           setAmountDisplay(amount);
           currencyConvert();
